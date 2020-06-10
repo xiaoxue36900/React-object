@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
 import Loading from "../Loading";
 import { getAccessRoutes, getUserInfo } from "./redux";
 import { updateLoading } from "@redux/actions/loading";
@@ -20,7 +21,7 @@ class Authorized extends Component {
       getAccessRoutes,
       updateLoading,
     } = this.props;
-    
+
     const promises = [];
 
     if (!roles.length) {
